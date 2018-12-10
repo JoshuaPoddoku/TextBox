@@ -1,9 +1,7 @@
 # TextBox
 A mobile first web-app, real-time tool which helps user to fasten his daily routine.
 
-Text Box - An online text editing web app
 
-A real-time tool which helps user to fasten his daily routine!
 
 Let’s see how..
 

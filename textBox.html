@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Text | Box</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- style rules -->
+    <style type="text/css">
+    	/*
+    	** Default
+    	*/
+
+    	* {
+			box-sizing: border-box;
+			transition: all 0.5s;
+    	}
+
+    	body {
+    		margin: 0;
+    		height: 100%;
+    		width: 100%;
+    	}
+
+    	/*
+    	**
+    	*/
+    	header {
+    		width: 100%;
+    		display: flex !important;
+    		flex-direction: row;
+    		justify-content: space-around;
+    		align-items: center;
+    		background: #333;
+    		padding: 0.5em;
+    		box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+    	}
+
+    	header h1 {
+    		font-family: Arial;
+    		font-weight: 900;
+    		color: #fff;
+    	}
+
+    	/*
+    	** capsule
+    	*/
+    	.capsule {
+    		padding: 0.8em;
+    		background: #fff;
+    		border-radius: 1%;
+    		font-size: 1.5em;
+    		word-spacing: 0.1em;
+    		width: 200px;
+    		text-align: center;
+    		font-family: Monospace;
+    	}
+
+		/* navigation */
+		nav span {
+			height: 50px;
+			width: 200px;
+			color: #999;
+			padding: 0.5em;
+			border-radius: 5px;
+		}
+
+		nav span:hover {
+			background: #444;
+			transition: 0.5s;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		/* button info */
+		.info-btn{
+			height: 50px;
+			padding: 0.5em;
+			color: #999;
+			border-radius: 5px;
+		}
+
+		.info-btn:hover {
+			background: #444;
+			transition: 0.5s;
+			color: #fff;
+			cursor: pointer;
+		}
+
+    	/* main content */
+    	main {
+			height: 500px;
+			width: 85%;
+			background: #eee;
+			margin: 10% auto;
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+			border-radius: 5px;
+			padding: 1em;
+    	}
+
+    	/* footer */
+    	footer {
+    		height: 200px;
+    		width: 100%;
+    		background: #333;
+    		position: relative;
+    		bottom: 0;
+    		left: 0;
+			padding: 1.5em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			color: #333;
+			margin-top: 1em;
+    	}
+
+    	.footer-capsule {
+    		padding: 0.5em;
+    		background: #fff;
+    		border-radius: 5%;
+    		font-size: 1.5em;
+    		word-spacing: 0.4em;
+    		width: 200px;
+    		text-align: center;
+    		font-family: Monospace;
+    		margin: 0 1em 0.5em 1em;
+    	}
+    	@media screen and (max-width: 780px) {
+    		header,
+    		footer {
+    			display: flex;
+    			flex-direction: column;
+    			justify-content: center;
+    			align-items: center;
+    			padding: 1.5em;
+    		}
+    	}
+    </style>
+</head>
+<body>
+	<header class="">
+		<h1 class="">TEXTBOX</h1>
+		<!-- First Capsule -->
+		<div class="capsule">
+			<nav>
+				<span>Edit</span>
+				<span>About</span>
+			</nav>
+		</div>
+		<!-- Second Capsule -->
+		<div class="capsule">
+			<span class="info-btn">How it works?</span>
+		</div>
+	</header>
+
+	<main>
+		<section>
+			<span>Enter Text Here</span>
+		</section>
+	</main>
+
+	<footer>	
+		<!-- First Capsule -->
+		<div class="footer-capsule">
+			<span>Variable Text</span>
+		</div>
+		<!-- Second Capsule -->
+		<div class="footer-capsule">
+			<span>Client Name</span>
+		</div>
+		<!-- Third Capsule -->
+		<div class="footer-capsule">
+			<span>Dexter</span>
+		</div>
+	</footer>
+</body>
+</html>

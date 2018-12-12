@@ -8,7 +8,7 @@
   display: inline-block;
   font-size: 25px;
   border-radius: 30px 30px 30px 30px;
-	font-family: "Agency FB",  serif;
+  font-family: "Agency FB",  serif;
 	
 }
 
@@ -26,3 +26,14 @@ nav{
 	background-color: #fcfcfc;
 	
 }
+
+#text-box{
+	background-color: #F8F8F8;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	margin-top: 60px;
+	
+}
+

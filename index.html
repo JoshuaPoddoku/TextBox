@@ -25,7 +25,7 @@
 <body>
   <!-- navbar-->
   <div>
-    <nav class="navbar navbar-expand-lg navbar-default">
+    <nav class="navbar  navbar-default">
       <div class="container">
         <div>
           <a href="index.html" class="l-float"><img alt="textbox" title="logo" src="images/logo1.svg" height="150" width="150">
@@ -81,11 +81,24 @@
     <!-- navbar ends-->
     <!--text-area--->
     <div class="container mx-auto">
-      <div class="rounded" id="text-box">
-        <div class="form-group shadow-textarea col-xs-4 col-sm-8	col-md-10 col-lg-12">
-          <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="15" placeholder="Write something here...">
-		</textarea>
+      <div class="rounded row" id="text-box">
+        <div class="form-group shadow-textarea col-sm-3 col-md-6 col-lg-8">
+          <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="15" cols="" placeholder="Write something here...">
+          </textarea>
         </div>
+        <div class="col-lg-4 ">
+            <div class="card">
+                <h5 class="card-header h5">Editor's Dashboard</h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class="badge badge-dark">
+                          <span class="badge badge-warning">1</span>Client Name</span><input type="text" id="vartext1" class="form-control"></li>
+                        <li class="list-group-item"><span class="badge badge-dark"> <span class="badge badge-warning">2</span>City Name</span></li>
+                        <li class="list-group-item"></li>
+                    </ul>             
+                  <a href="#!" class="btn btn-success">Commit Changes</a>
+                </div>
+              </div>
       </div>
    
   <!--
@@ -95,7 +108,7 @@
   -->
 
   <footer class="container-fluid bg-dark p-3 text-center fixed-bottom">
-    <span class="text-muted text-center">&copy; Copyright textbox.com | All Rights Reserved.</span>
+    <span class="text-muted text-center">&copy; Copyright 2018 textbox.com  | All Rights Reserved.</span>
   </footer>
   
   <!-- scripts ---->

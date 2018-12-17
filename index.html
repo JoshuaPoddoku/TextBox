@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <title>Text Box</title>
   <meta charset="utf-8">
@@ -7,86 +6,101 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Bootstrap core CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css" rel="stylesheet">
 
-
-
-
   <link rel="icon" href="images/logo.svg" type="image/svg">
-  <!--<link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/style.css">
 
-
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 </head>
-
 <body>
-
   <!-- navbar-->
   <div>
     <nav class="navbar navbar-expand-lg navbar-default">
       <div class="container">
         <div>
-
           <a href="index.html" class="l-float"><img alt="textbox" title="logo" src="images/logo1.svg" height="150" width="150">
           </a>
-
         </div>
-
-
-
-
         <div class="f-right">
-
-
           <a href="#" class="btn button1">
-
             Edit
           </a>
-
           <a href="#" class="btn button1">
             About
           </a>
-
-          <a href="#" class="btn button1">
+          <!--
+          <a href="./howItWorks.html" class="btn button1">
             How it works?
-          </a>
+          </a>-->
+          <!-- Button to Open the Modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+           How it works?
+          </button>
 
+          <!-- The Modal -->
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">HOW IT WORKS</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="container">
+                    If you write a formal/informal message or mail to a client and you want to change the client 
+                    name always for different clients. So instead of selecting the text area and typing always. 
+                    Simply the dashboard (as seen in the mock-up) will help out . 
+                    When you change the name as 'dexter' over there it'll update the 'client name' (which I've highlighted with red color). 
+                    You may wonder why do we need this dashboard and website itself for just changing the client name. 
+                    Just imagine in case of 100 lines text and you've to change 30 different words which may include name, address,
+                     special greetings, and all common fields. One will take help of assistants!
+                  </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </nav>
-
     <!-- navbar ends-->
-
     <!--text-area--->
-
-    <div class="container">
-    
-	<div class="rounded" id="text-box">
-
-      <div class="form-group shadow-textarea col-xs-4 col-sm-8	col-md-10 col-lg-12">
-
-        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="15" placeholder="Write something here...">
-
+    <div class="container mx-auto">
+      <div class="rounded" id="text-box">
+        <div class="form-group shadow-textarea col-xs-4 col-sm-8	col-md-10 col-lg-12">
+          <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="15" placeholder="Write something here...">
 		</textarea>
-     
+        </div>
       </div>
-	
-	</div>	
    
+  <!--
     </div>
+      <p id="demo">Hello</p>
+    </div>
+  -->
 
-
-  </div>
+  <footer class="container-fluid bg-dark p-3 text-center fixed-bottom">
+    <span class="text-muted text-center">&copy; Copyright textbox.com | All Rights Reserved.</span>
+  </footer>
+  
+  <!-- scripts ---->
+  <script async defer src="scripts/main.js"></script>
 </body>
 <footer>
-
 </footer>
-
 </html>

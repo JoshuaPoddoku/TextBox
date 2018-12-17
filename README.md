@@ -2,7 +2,7 @@
 
 <img src="images/logo1.svg" alt="logo" title="logo" width=300 />
 
-**A mobile first web-app, real-time tool which helps user to fasten his daily routine.**
+**A mobile first web-app, real-time tool that will help a user optimize their daily routine.**
 
 
 https://joshuapoddoku.github.io/TextBox  (front end testing only!)

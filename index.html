@@ -3,7 +3,7 @@
   <title>Text Box</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link href="jquery/jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -20,6 +20,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="jquery/jquery-linedtextarea.js"></script>
+	
 
 </head>
 <body>
@@ -83,7 +87,7 @@
     <div class="container mx-auto">
       <div class="rounded row" id="text-box">
         <div class="form-group shadow-textarea col-sm-3 col-md-6 col-lg-8">
-          <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="15" cols="" placeholder="Write something here...">
+          <textarea class="form-control  z-depth-1 lined" id="exampleFormControlTextarea6" rows="17" placeholder="Write something here...">
           </textarea>
         </div>
         <div class="col-lg-4 ">
@@ -96,11 +100,18 @@
                         <li class="list-group-item"><span class="badge badge-dark"> <span class="badge badge-warning">2</span>City Name</span></li>
                         <li class="list-group-item"></li>
                     </ul>             
-                  <a href="#!" class="btn btn-success">Commit Changes</a>
+                  <a href="#!" class="btn btn-success" aria-label="New feature or request">Commit Changes</a>
                 </div>
               </div>
-      </div>
-   
+        </div>
+        <script>
+          $(function() {
+            $(".lined").linedtextarea(
+              {selectedLine: 1}
+            );
+          });
+          </script>
+          
   <!--
     </div>
       <p id="demo">Hello</p>

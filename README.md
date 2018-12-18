@@ -26,11 +26,24 @@ All these type of text fields which you want to edit for future use will be retu
 
 *Now no need to search for stuffs, they’ll be waiting for you in the dashboard itself!* :smile: 
 
-<p>In Short:<p>
+In Short:
 - User Friendly.
 - Easier.
 - Saves Time.
 
+Core Features:
+--------------------------------
+- Mobile-first application.
+- Best suits for bulk content.
+- Ease complications in editing.
+
+FAQs
+--------------------------------
+- How can **TextBox** replace CTRL + F thing?
+    - CTRL + F helps only when you remember or find the text you want to change.
+    - CTRL + F function can be used once at a time where as TextBox can help with as many texts you select with just one Click or Tap.
+    - TextBox also comes with multi-tab feature which make more user friendly.
+    
 # MOCKUP
 
 <img src="images/mockup_idea1i-02.jpg" alt="mockup" title="mockup for website" width=1000 />

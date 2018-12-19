@@ -14,7 +14,7 @@
 **A mobile first web-app, real-time tool that will help a user optimize their daily routine.**
 
 
-<a href="https://joshuapoddoku.github.io/TextBox">textbox.com</a>  <img src="https://img.shields.io/badge/Web--App-under%20development-brightgreen.svg" alt="status" title="status"/>    
+<a href="https://joshuapoddoku.github.io/TextBox"> <img src="https://img.shields.io/badge/textbox.io-under--development-brightgreen.svg" alt="status" title="check-status"/></a>     
 
 Troubles you Face (not by using this :stuck_out_tongue:)
 ------------

@@ -1,6 +1,15 @@
-# Textbox
+# <h2>Textbox</h2>
 
+<p align="center">
 <img src="images/logo1.svg" alt="logo" title="logo" width=300 />
+<img src="https://img.shields.io/badge/VERSION-1.0.0-blue.svg" alt="MIT license" title="license"/>
+<img src="https://img.shields.io/github/license/JoshuaPoddoku/TextBox.svg" alt="MIT license" title="license"/>
+<img src="https://img.shields.io/badge/Web--App-under%20development-brightgreen.svg" alt="status" title="status"/>    
+
+</p>
+
+
+</center>
 
 **A mobile first web-app, real-time tool that will help a user optimize their daily routine.**
 
@@ -31,13 +40,20 @@ In Short:
 - Easier.
 - Saves Time.
 
-Core Features:
+<p align="left">
+<img src="https://img.shields.io/badge/FEATURES-CORE-green.svg" alt="Features" title="Features" width=200/>
+</p>
+
 --------------------------------
 - Mobile-first application.
 - Best suits for bulk content.
 - Ease complications in editing.
 
-FAQs
+
+<p align="left">
+<img src="https://img.shields.io/badge/FAQs-%3F-red.svg" alt="FAQs" title="FAQs" width=80/>
+</p>
+
 --------------------------------
 - How can **TextBox** replace CTRL + F thing?
     - CTRL + F helps only when you remember or find the text you want to change.

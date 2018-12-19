@@ -4,7 +4,7 @@
 <img src="images/logo1.svg" alt="logo" title="logo" width=300 />
 <img src="https://img.shields.io/badge/VERSION-1.0.0-blue.svg" alt="MIT license" title="license"/>
 <img src="https://img.shields.io/github/license/JoshuaPoddoku/TextBox.svg" alt="MIT license" title="license"/>
-<img src="https://img.shields.io/badge/Web--App-under%20development-brightgreen.svg" alt="status" title="status"/>    
+
 
 </p>
 
@@ -14,7 +14,7 @@
 **A mobile first web-app, real-time tool that will help a user optimize their daily routine.**
 
 
-https://joshuapoddoku.github.io/TextBox  (front end testing only!)
+<a href="https://joshuapoddoku.github.io/TextBox">textbox.com</a>  <img src="https://img.shields.io/badge/Web--App-under%20development-brightgreen.svg" alt="status" title="status"/>    
 
 Troubles you Face (not by using this :stuck_out_tongue:)
 ------------
@@ -44,17 +44,17 @@ In Short:
 <img src="https://img.shields.io/badge/FEATURES-CORE-green.svg" alt="Features" title="Features" width=200/>
 </p>
 
---------------------------------
 - Mobile-first application.
+- Multi-tab text editing interface.
 - Best suits for bulk content.
 - Ease complications in editing.
+
 
 
 <p align="left">
 <img src="https://img.shields.io/badge/FAQs-%3F-red.svg" alt="FAQs" title="FAQs" width=80/>
 </p>
 
---------------------------------
 - How can **TextBox** replace CTRL + F thing?
     - CTRL + F helps only when you remember or find the text you want to change.
     - CTRL + F function can be used once at a time where as TextBox can help with as many texts you select with just one Click or Tap.

@@ -11,7 +11,7 @@
   <!-- Bootstrap core CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Material Design Bootstrap -->
+  <!--Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css" rel="stylesheet">
 
   <link rel="icon" href="images/logo.svg" type="image/svg">
@@ -22,8 +22,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+  <!--
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script src="jquery/jquery-linedtextarea.js"></script>
+  -->
 	
   <style >
     /**
@@ -51,15 +53,17 @@
     **/
     .main-content-area 
     {
-      width: 100%;
+      margin: 0 !important;
+      width: 50%;
+      box-shadow: 0 0 105px 105px green;
     }
     #textarea 
     {
-      width: 40%;
+      width: 60%;
     }
     #dashboard 
     {
-      width: ;
+      width: 40%;
     }
     /* Numbered line */
     .lines 
@@ -73,23 +77,19 @@
 </head>
 <body>
   <!-- navbar-->
-  <nav class="navbar  navbar-default">
+  <nav class="navbar navbar-default">
     <div class="container">
       <div>
         <a href="index.html" class="l-float"><img alt="textbox" title="logo" src="images/logo1.svg" height="150" width="150">
         </a>
       </div>
       <div class="f-right">
-        <a href="#" class="btn button1">
+        <a href="#" class="btn nav-links">
           Edit
         </a>
-        <a href="#" class="btn button1">
+        <a href="#" class="btn nav-links">
           About
         </a>
-        <!--
-        <a href="./howItWorks.html" class="btn button1">
-          How it works?
-        </a>-->
         <!-- Button to Open the Modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
          How it works?
@@ -128,7 +128,7 @@
   </nav>
   <!-- navbar ends-->
   <!--text-area--->
-  <div class="container mx-auto" class="main-content-area">
+  <div class="container-fluid" class="main-content-area">
     <div class="rounded row" id="text-box">
       <div class="form-group shadow-textarea col-sm-3 col-md-6 col-lg-8" id="textarea">
         <textarea class="form-control z-depth-1 lined" id="exampleFormControlTextarea6" rows="17" placeholder="Write something here...">
@@ -148,6 +148,7 @@
           </div>
         </div>
       </div>
+      <!--
       <script>
         $(function() {
           $(".lined").linedtextarea(
@@ -155,16 +156,11 @@
           );
         });
       </script>
+    -->
     </div>
   </div>
-          
-  <!--
-    </div>
-      <p id="demo">Hello</p>
-    </div>
-  -->
 
-  <footer class="container-fluid bg-dark p-3 text-center fixed-bottom">
+  <footer class="container-fluid bg-dark p-3 text-center">
     <span class="text-muted text-center">&copy; Copyright 2018 textbox.com  | All Rights Reserved.</span>
   </footer>
   

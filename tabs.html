@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TABS</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		* {
+			transition: all 0.5s ease-in-out;
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			/* overflow: scroll; */
+			height: 100vh;
+			width: 100%;
+			background: #f5f5f5;
+		}
+		/* tabs */
+		.tab-container {
+			height: 500px;
+			width: 50%;
+			border-radius: 1px;
+			border: none;
+			box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+			margin: 5% auto;
+		}
+
+		.tab-header {
+			letter-spacing: 1em;
+			text-align: center;
+			font-weight: 900;
+			font-family: Helvetica;
+			background: #333;
+			height: 50px;
+			color: #fff;
+			padding: 0.5em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1em;
+		}
+		/* Overflow scroll */
+		.tab-container
+		{
+			overflow: scroll;
+			width: 50% !important;
+		}
+		.tab-menu {
+			display: inline-block;
+			width: 100%;
+			overflow-x: scroll;
+			overflow-wrap: nowrap;
+		}
+		.tab-menu-item-header {
+			float: left;
+			color: #333;
+			font-weight: 900;
+			font-size: 1em;
+			font-family: "Open Sans";
+			padding: 1em;
+			text-align: center;
+			height: 30px;
+			width: 100%; /* Make the tab header full width - span across the screen*/
+			border: 1px solid #ccc;
+			box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2);
+			border-radius: 1px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			background: #eee;
+			cursor: pointer;
+		}
+
+		.tab-menu-item-header span {
+			float: right;
+			font-family: Arial;
+			color: #000;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+			background: rgba(0,0,0,0.4);
+		}
+		.tab-menu-item-header span:hover {
+			color: #f00;
+		}
+		.tab-menu-item-pane {
+			height:410px;
+			border: 1px solid #ccc;
+			width: 100%;
+			border-radius: 2px;
+			box-shadow: 0 5px 1px 0 rgba(0,0,0,0.2);
+		}
+		.add-new-tab-header {
+			height: 35px;
+			width: 100%
+			background: #eee;
+			border: 1px solid #ccc;
+			box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2);
+			background: #333;
+		}
+		.add-new-tab-header  span {
+			font-family: Arial;
+			color: #fff;
+			height: 50px;
+			width: 50px;
+			font-weight: 900;
+			font-size: 1.5em;
+			font-family: "Open Sans";
+			cursor: pointer;
+			/*background: rgba(0,0,0,0.2);*/
+			padding: 0 1em 0 1em;
+		}
+		.add-new-tab-header  span:hover {
+			border-radius: none;
+			background: rgba(0,0,0,0.4);
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<article 	 class="tab-container">
+			<section class="tab-header">TEXT | BOX</section>
+			<section class="tab-body">
+				<div class="add-new-tab-header"><span id="add-btn">+</span></div>
+				<section id="tab-menu" class="tab-menu">
+					<div id="tab-inner">
+						<div class="tab-menu-item-header tab-menu-item" id="currentTab">Newtab 
+							<span id="pop" class="close-btn" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Close all tabs" data-content="close current tab">x</span>
+							<script>
+								$(document).ready(function(){
+								    $('#pop').popover();   
+								});
+							</script>
+						</div>
+						<textarea class="tab-menu-item-pane"></textarea>
+					</div>
+				</section>
+			</section>
+		</article>
+	</main>
+
+	<script type="text/javascript">
+		// Function to close the tab pane
+		function closeTab () {
+			var close_btns = document.getElementsByClassName("close-btn");
+			// Conver NodeLists / Collections to an array
+		    Object.entries(close_btns).map(function (tabs) {
+		    	for(var i = 0 ; i < tabs.length ; i++) {
+		    		tabs[1].addEventListener("click", function(e) { 					                 
+			        	tabs[1].parentElement.parentElement.style.display = "none";
+			        	e.stopPropagation();
+					});
+		    	}
+			});
+		}
+
+		// Call the function
+		closeTab();
+		// setInterval(closeTab(), 10);
+
+		// Function to open the tab pane
+		function openTab () {
+			var addBtn = document.getElementById("add-btn");
+			addBtn.addEventListener("click", function (e) {
+				// Outer Div Element
+				var currentTabElem = document.createElement("div");
+				currentTabElem.setAttribute("class","tab-menu-item-header tab-menu-item");
+				currentTabElem.setAttribute("id","currentTab");
+				currentTabElem.innerHTML = "Newtab";
+				// Create span Element Inside Div Element
+				var spanElem = document.createElement("span");
+				spanElem.setAttribute("class", "close-btn");
+				spanElem.setAttribute("data-toggle", "popover");
+				spanElem.setAttribute("title", "Close all tabs");
+				spanElem.setAttribute("data-content", "Close current tab only");
+				spanElem.setAttribute("data-placement", "bottom");
+				spanElem.setAttribute("data-trigger", "focus");
+				spanElem.innerHTML = "x";
+				$(document).ready(function(){
+			    $('#pop').popover();   
+				});
+				
+				// Add span element to currenTabElement
+				currentTabElem.appendChild(spanElem);
+
+				// Create textarea pane 
+				var textAreaPane = document.createElement("textarea");
+				textAreaPane.setAttribute("class","tab-menu-item-pane");
+
+				/*
+				// Get parent element to append child elements
+				var sectionElem = document.getElementById("tab-menu");
+				sectionElem.appendChild(currentTabElem);
+				sectionElem.appendChild(textAreaPane);
+				*/
+				
+				// Container Element 
+				var tabInner = document.createElement("div");
+				tabInner.setAttribute("id", "tab-inner");
+				// Append the Elements to tab inner element container
+				tabInner.appendChild(currentTabElem);
+				tabInner.appendChild(textAreaPane);
+				// Get parent element to append child elements
+				var sectionElem = document.getElementById("tab-menu");
+				sectionElem.appendChild(tabInner);
+
+				// Stop bubbling and capturing
+				e.stopPropagation();
+			});
+		}
+		// Call the function 
+		openTab();
+	</script>
+</body>
+</html>

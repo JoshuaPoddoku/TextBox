@@ -44,19 +44,29 @@
 		display: flex;
 		justify-content: space-between;
 		overflow-x: scroll;
-		overflow-wrap: nowrap;
 	}
 	@media only screen and (max-width: 601px) {
 		.tab-body {
-		flex-direction: column;
+			flex-direction: column;
+			height: auto;
+		}
+		.numbers {
+			width: 100%!important;
+			border: none!important;
+			box-shadow: none!important;
+			text-align: center;
 		}
 		.numbers span {
-			display: inline-block;
-			float: left;
-			margin-top: 0;
+			display: inline-block !important;
+			margin-top: none;
+			margin-left: 0.5em;
 		}
-		.dashboard {
+		.dashboard-content {
+			margin-top: 1em;
 			width: 100%;
+			height: auto;
+			width: 100%!important;
+			border: 1px solid #ccc;
 		}
 	}
 	.tab-menu {
@@ -137,10 +147,11 @@
 	** number
 	*/
 	.numbers {
-		height: 300px;
+		height: auto;
 		width: 5%;
 		border: 1px solid #ccc;
 		box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+		display: none;
 	}
 	.numbers span:first-child {
 		color:#333;
@@ -157,19 +168,19 @@
 	** dashboard container
 	*/
 	.dashboard-container {
-		height: auto;
+		height: 300px;
 		width: 40%;
 		border: 1px solid #ccc;
 		padding: 0.5em;
-		box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+		box-shadow: none;
 	}
 
 	/*
 	** dashboard content
 	*/
 	#dashboard-content {
-		width: 150px!important;
-		height: auto;
+		width: 100% !important;
+		height: 300px;
 	}
 
 	textarea {
@@ -212,28 +223,7 @@
 					<div id="tab-inner"></div>
 				</section>
 				<section class="dashboard-container">
-					<div class="col-lg-4">
-				        <div class="card" id="dashboard-content">
-				        	<h5 class="card-header">Editor's Dashboard</h5>
-				          	<div class="card-body">
-					            <ul class="list-group list-group-flush">
-					                <li class="list-group-item">
-					                	<span class="badge badge-dark">
-					                  		<span class="badge badge-warning">1</span>Client Name
-					                  	</span>
-					                  	<input type="text" id="vartext1" class="form-control">
-					                </li>
-					                <li class="list-group-item">
-					                	<span class="badge badge-dark">
-					                		<span class="badge badge-warning">2</span>City Name
-					                	</span>
-					                </li>
-					                <li class="list-group-item"></li>
-					            </ul>             
-					            <a href="#!" class="btn btn-success" aria-label="New feature or request">Commit Changes</a>
-				          	</div>
-				        </div>
-			      	</div>
+					
 				</section>
 			</section>
 		</article>

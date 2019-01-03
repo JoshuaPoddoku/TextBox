@@ -42,3 +42,4 @@
 - Everyone is free to object or suggest any improvements.
 - All the discussions will be done through gitter channel only.  
     
+Added branches

@@ -68,3 +68,7 @@ If you write a formal/informal message or mail to a client and you want to chang
 You may wonder why do we need this dashboard and website itself for just changing the client name. Just imagine in case of 100 lines text and you've to change 30 different words which may include name, address, special greetings, and all common fields. One will take help of assistants!
 
 **Note: You can select multiple words in dashboard**
+
+## Contributors
+
+For full contribution guidelines see out [guide](/docs/develop-locally.md) 

@@ -1,116 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Text Box</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="jquery/jquery-linedtextarea.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <title>Text Box</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap core CSS -->
 
-  <link rel="icon" href="images/logo.svg" type="image/svg">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link href="jquery/jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
-  
-</head>
+    <link rel="icon" href="images/logo.svg" type="image/svg" />
+    <link rel="stylesheet" href="css/style.css" />
 
-<body>
-  <!-- navbar-->
-  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-    <!-- Brand -->
-    <a class="navbar-brand abs" href="index.html">Text Box</a>
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse" id="collapsingNavbar">
-      <!-- Navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="#HowItWorksModal" data-toggle="modal">How it works?</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Edit</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="" data-target="#AboutModal" data-toggle="modal">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- navbar ends-->
-  <!--text-area--->
-  <div class="container-fluid" class="main-content-area">
-    <div class="rounded row" id="text-box">
-      <div class="form-group shadow-textarea col-sm-3 col-md-6 col-lg-8" id="textarea">
-        <textarea class="form-control z-depth-1 lined" id="exampleFormControlTextarea6" rows="17" placeholder="Write something here..."></textarea>
-      </div>
-      <div class="col-lg-4" id="dashboard">
-        <div class="card">
-          <h5 class="card-header h5">Editor's Dashboard</h5>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><span class="badge badge-dark">
-                  <span class="badge badge-warning">1</span>Client Name</span><input type="text" id="vartext1" class="form-control"></li>
-              <li class="list-group-item"><span class="badge badge-dark"> <span class="badge badge-warning">2</span>City
-                  Name</span></li>
-              <li class="list-group-item"></li>
-            </ul>
-            <a href="#!" class="btn btn-success" aria-label="New feature or request">Commit Changes</a>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><i class="fas fa-terminal mr-3"></i>TextBox</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor03"
+        aria-controls="navbarColor03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Edit <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          How it works?
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">HOW IT WORKS</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="container">
+                  If you write a formal/informal message or mail to a client and
+                  you want to change the client name always for different
+                  clients. So instead of selecting the text area and typing
+                  always. Simply the dashboard (as seen in the mock-up) will
+                  help out . When you change the name as 'dexter' over there
+                  it'll update the 'client name' (which I've highlighted with
+                  red color). You may wonder why do we need this dashboard and
+                  website itself for just changing the client name. Just imagine
+                  in case of 100 lines text and you've to change 30 different
+                  words which may include name, address, special greetings, and
+                  all common fields. One will take help of assistants!
+                </div>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </nav>
 
-  <!-- How it Works Modal -->
-  <div class="modal fade" id="HowItWorksModal">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">HOW IT WORKS</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="container">
-            If you write a formal/informal message or mail to a client and you want to change the client
-            name always for different clients. So instead of selecting the text area and typing always.
-            Simply the dashboard (as seen in the mock-up) will help out .
-            When you change the name as 'dexter' over there it'll update the 'client name' (which I've
-            highlighted with red color).
-            You may wonder why do we need this dashboard and website itself for just changing the client name.
-            Just imagine in case of 100 lines text and you've to change 30 different words which may include
-            name, address,
-            special greetings, and all common fields. One will take help of assistants!
-          </div>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
+    <!-- navbar ends-->
+
+    <!--content-->
+    <div class="container">
+      <div class="form-group mt-4">
+        <label for="inputText"
+          ><h1 class="display-5">Input Text (::example for labels)</h1></label
+        >
+        <textarea
+          onkeyup="textfun()"
+          onchange="textfun()"
+          class="form-control"
+          id="inputText"
+          rows="10"
+          column="1"
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="temps"><h1 class="display-5">labels</h1></label>
+        <div class="renderLabels d-flex flex-column align-items-center"></div>
+      </div>
+
+      <div>
+        <label for="generatedOutput"
+          ><h1 class="display-5">Output Text</h1></label
+        >
+        <div id="generatedOutput"></div>
       </div>
     </div>
-  </div>
-  <!-- END: How it Works Modal -->
 
-  <footer class="container-fluid bg-dark p-3 text-center">
-    <span class="text-muted text-center">&copy; Copyright 2018 textbox.com | All Rights Reserved.</span>
-  </footer>
+    <footer class="container-fluid bg-dark p-3 text-center mb-0">
+      <span class="text-muted text-center"
+        >&copy; Copyright 2018 textbox.com | All Rights Reserved.</span
+      >
+    </footer>
 
-  <!-- SCRIPTS ---->
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <!-- Custom Library ---->
-  <script async defer src="scripts/main.js"></script>
-</body>
+    <!-- scripts ---->
 
+    <script src="scripts/main.js"></script>
+  </body>
 </html>

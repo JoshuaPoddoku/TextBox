@@ -1,58 +1,29 @@
-/**
-*Nav links
-**/
-.nav-links
-{
-  background-color: white;
-  border: none;
-  color: #000;
-  text-align: center;
-  text-decoration: none !important;
-  display: inline-block;
-  font-size: 15px;
-  border-radius: 30px 30px 30px 30px;
-  font-family: "Agency FB",  serif;
-
-}
-
-/*
-** float
-*/
-.f-right
-{
-float: right; /* float right */
-}
-.l-float
-{
-float: left; /* float right */
-}
-
-/*
-** Navigation
-*/
-nav
-{
-/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color: #fcfcfc;*/
-}
+@media (min-width: 768px) {
+  .navbar-brand.abs
+      {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          text-align: center;
+      }
+  }
 
 /*
 ** text box
 */
-#text-box
-{
-background-color: #F8F8F8;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-padding-top: 40px;
-padding-bottom: 40px;
-margin-bottom: 40px;
-margin-top: 60px;
+#text-box {
+  background-color: #F8F8F8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
 /*
 ** footer
 */
 footer {
-	position: relative;
-	bottom: 0;
+  position: relative;
+  bottom: 0;
 }

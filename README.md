@@ -66,7 +66,8 @@ In Short:
 
 If you write a formal/informal message or mail to a client and you want to change the client name always for different clients. So instead of selecting the text area and typing always. Simply the dashboard (as seen in the mock-up) will help out . When you change the name as 'dexter' over there it'll update the 'client name' (which I've highlighted with red color).
 You may wonder why do we need this dashboard and website itself for just changing the client name. Just imagine in case of 100 lines text and you've to change 30 different words which may include name, address, special greetings, and all common fields. One will take help of assistants!
-
+# WORKING
+<img src="images/basic_idea.gif" alt="working" title="This is how it will work" width=200/>
 **Note: You can select multiple words in dashboard**
 
 ## Contributors

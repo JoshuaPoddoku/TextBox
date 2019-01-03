@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Text | Box</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- logo -->
+  <link rel="shortcut icon" href="images/logo.svg" type="image/svg">
+  <!-- assets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- stylesheets -->
+  <style >
+
+	* {
+		transition: all 0.5s ease-in-out;
+		box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		/* overflow: scroll; */
+		height: 100vh;
+		width: 100%;
+		background: #fff;
+	}
+	/* tabs */
+	.tab-container
+	{
+		height: 350px;
+		border-radius: 1px;
+		overflow: scroll;
+		width: 90% !important;
+		overflow-x: auto;
+		box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+		margin: 5% auto;
+	}
+	.tab-body {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		overflow-x: scroll;
+	}
+	@media only screen and (max-width: 601px) {
+		.tab-body {
+			flex-direction: column;
+			height: auto;
+		}
+		.numbers {
+			width: 100%!important;
+			border: none!important;
+			box-shadow: none!important;
+			text-align: center;
+		}
+		.numbers span {
+			display: inline-block !important;
+			margin-top: none;
+			margin-left: 0.5em;
+		}
+		.dashboard-content {
+			margin-top: 1em;
+			width: 100%;
+			height: auto;
+			width: 100%!important;
+			border: 1px solid #ccc;
+		}
+	}
+	.tab-menu {
+		/*display: inline-block;*/
+		width: 100%;
+	}
+	.tab-menu-item-header {
+		float: left;
+		color: #333;
+		font-weight: 900;
+		font-size: 1em;
+		font-family: "Open Sans";
+		padding: 1em;
+		text-align: center;
+		height: 30px;
+		width: 100%; /* Make the tab header full width - span across the screen*/
+		border: 1px solid #ccc;
+		box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2);
+		border-radius: 1px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		background: #eee;
+		cursor: pointer;
+	}
+
+	.tab-menu-item-header span {
+		float: right;
+		font-family: Arial;
+		color: #000;
+		border-radius: 50%;
+		height: 30px;
+		width: 30px;
+		background: rgba(0,0,0,0.4);
+	}
+	.tab-menu-item-header span:hover {
+		color: #f00;
+	}
+	.tab-menu-item-pane {
+		height:410px;
+		border: 1px solid #ccc;
+		width: 100%;
+		border-radius: 2px;
+		box-shadow: 0 5px 1px 0 rgba(0,0,0,0.2);
+	}
+	.add-new-tab-header {
+		height: 35px;
+		width: 100%;
+		background: #eee;
+		border: 1px solid #ccc;
+		box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2);
+		background: #333;
+	}
+
+	/* close button */
+	.add-new-tab-header  span {
+		font-family: Arial;
+		color: #fff;
+		height: 50px;
+		width: 50px;
+		font-weight: 900;
+		font-size: 1.5em;
+		font-family: "Open Sans";
+		cursor: pointer;
+		padding: 0 1em 0 1em;
+	}
+	.add-new-tab-header  span:hover {
+		border-radius: none;
+		background: rgba(0,0,0,0.4);
+	}
+	/* dopdown */
+	#dropDown {
+		cursor: pointer;
+	}
+
+	/*
+	** number
+	*/
+	.numbers {
+		height: auto;
+		width: 5%;
+		border: 1px solid #ccc;
+		box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+		display: none;
+	}
+	.numbers span:first-child {
+		color:#333;
+	}
+
+	.numbers span {
+		display: block;
+		text-align: center;
+		color: #999;
+		margin-top: 0.5em;
+	}
+
+	/*
+	** dashboard container
+	*/
+	.dashboard-container {
+		height: 300px;
+		width: 40%;
+		border: 1px solid #ccc;
+		padding: 0.5em;
+		box-shadow: none;
+	}
+
+	/*
+	** dashboard content
+	*/
+	#dashboard-content {
+		width: 100% !important;
+		height: 300px;
+	}
+
+	textarea {
+		height: 265px !important;
+		width: 100% !important;
+		transition: all 0.5s ease-in-out;
+		border: 1px solid #ccc;
+		box-shadow:inset 10px 10px 50px 50px rgba(0,0,0,0.5);
+		background: #999;
+		color: #fff;
+		font-family: "Open Sans";
+		padding: 0.1em;
+	}
+	/* hide */
+	.hide {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<main>
+		<article class="tab-container">
+			<div class="add-new-tab-header"><span id="add-btn">+</span></div>
+			<section class="tab-body">
+				<section class="numbers">
+					<span>1</span>
+					<span>2</span>
+					<span>3</span>
+					<span>4</span>
+					<span>5</span>
+					<span>6</span>
+					<span>7</span>
+					<span>8</span>
+					<span>9</span>
+					<span>10</span>
+					<span>11</span>
+					<span>12</span>
+				</section>
+				<section id="tab-menu" class="tab-menu">
+					<div id="tab-inner"></div>
+				</section>
+				<section class="dashboard-container">
+					
+				</section>
+			</section>
+		</article>
+	</main>
+
+	<script type="text/javascript">
+		// Function to close the tab pane
+		function closeTab (elem) {
+			// Remove textarea
+			elem.parentElement.nextElementSibling.remove(this);
+			// Remove the header
+			elem.parentElement.remove(this);
+		}
+
+		function openTab () {
+			var addBtn = document.getElementById("add-btn");
+			addBtn.addEventListener("click", function (e) {
+				// Outer Div Element
+				var currentTabElem = document.createElement("div");
+				currentTabElem.setAttribute("class","tab-menu-item-header tab-menu-item");
+				currentTabElem.setAttribute("id","currentTab");
+				currentTabElem.innerHTML = "Newtab";
+				// Create span Element Inside Div Element
+				var spanElem = document.createElement("span");
+				spanElem.setAttribute("class", "close-btn");
+				spanElem.innerHTML = "x";
+				spanElem.onclick = function (){
+					closeTab(this);
+				}
+				// Click accordion to show newtabs 
+				var dropDown = document.createElement('i');
+				dropDown.setAttribute('class', 'fa fa-caret-down');
+				dropDown.setAttribute('id', 'dropDown');
+				dropDown.onclick = function(){
+					textAreaPane.classList.toggle('hide');
+				}
+
+				// Add span element to currenTabElement
+				currentTabElem.appendChild(spanElem);
+				// Add drop down element to currentTabElement
+				currentTabElem.appendChild(dropDown);
+
+				// Create textarea pane 
+				var textAreaPane = document.createElement("textarea");
+				textAreaPane.setAttribute("class","tab-menu-item-pane");
+				// textAreaPane.style.position = 'absolute';
+				textAreaPane.style.zIndex = 10;
+				
+				// Container Element 
+				var tabInner = document.createElement("div");
+				tabInner.setAttribute("id", "tab-inner");
+				// Append the Elements to tab inner element container
+				tabInner.appendChild(currentTabElem);
+				tabInner.appendChild(textAreaPane);
+				// Get parent element to append child elements
+				var sectionElem = document.getElementById("tab-menu");
+				sectionElem.appendChild(tabInner);
+			});
+		}
+		// Call the function 
+		openTab();
+	</script>
+</body>
+</html>

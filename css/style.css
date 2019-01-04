@@ -1,18 +1,17 @@
 @media (min-width: 768px) {
-  .navbar-brand.abs
-      {
-          position: absolute;
-          width: 100%;
-          left: 0;
-          text-align: center;
-      }
+  .navbar-brand.abs {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
   }
+}
 
 /*
 ** text box
 */
 #text-box {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-top: 40px;
   padding-bottom: 40px;

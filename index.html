@@ -4,6 +4,9 @@
     <title>Text Box</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Editor-->
+    <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+
     <link
       href="jquery/jquery-linedtextarea.css"
       type="text/css"
@@ -117,13 +120,13 @@
         <label for="inputText"
           ><h1 class="display-5">Input Text (::example for labels)</h1></label
         >
+
         <textarea
-          onkeyup="textfun()"
-          onchange="textfun()"
           class="form-control"
           id="inputText"
           rows="10"
           column="1"
+          name="editor1"
         ></textarea>
       </div>
 
@@ -149,5 +152,6 @@
     <!-- scripts ---->
 
     <script src="scripts/main.js"></script>
+    <script></script>
   </body>
 </html>

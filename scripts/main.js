@@ -24,8 +24,12 @@ let originalString = '';
 let modifiedString = '';
 let labels = [];
 
-const textfun = e => {
-  let inputText = document.querySelector('#inputText').value;
+var editor = CKEDITOR.replace('editor1');
+editor.on('change', e => {
+  console.log(e.editor.getData());
+  let inputText = e.editor.getData();
+  console.log(inputText);
+
   originalString = inputText;
   inputText.replace(/\n/gi, '\n');
   modifiedString = inputText;
@@ -33,7 +37,9 @@ const textfun = e => {
   if (labels.length !== 0) {
     renderLabel(labels);
   }
-};
+});
+
+const textfun = e => {};
 
 const findTemplate = stringData => {
   let charArray = stringData.split('');

@@ -21,55 +21,52 @@ $('.blur').blur(function() {
 
 let tabCount = 1;
 let activeTab = 1;
-let idg = 1;
 
 const inputText = id => {
-  return `<div class="form-group mt-4">
-  <label for="inputText"
-    ><h1 class="display-5">Tab ${id} : Input Text(__example__ for labels)</h1></label
-  >
+  return `<div class="form-group mt-4"><label for="inputText"><h1 class="display-5">Tab ${id} : Input Text(__example__ for labels)</h1></label><textarea class="form-control" id="input${id}" rows="10" column="1" name="editor${id}"></textarea></div>
+<div><label for="temps"><h1 class="display-5">labels</h1></label><div class="d-flex flex-column align-items-center" id="label${id}"></div></div>
+<div><label for="generatedOutput"><h1 class="display-5">Output Text</h1></label>
+<div id="output${id}"></div></div>`;
+};
 
-  <textarea
-    class="form-control"
-    id="input${id}"
-    rows="10"
-    column="1"
-    name="editor${id}"
-  ></textarea>
-</div>
-<div>
-  <label for="temps"><h1 class="display-5">labels</h1></label>
-  <div class="d-flex flex-column align-items-center" id="label${id}"></div>
-</div>
-<div>
-  <label for="generatedOutput"
-    ><h1 class="display-5">Output Text</h1></label
-  >
-  <div id="output${id}"></div>
-</div>`;
+const genButton = () => {
+  let d = JSON.parse(localStorage.getItem(activeTab));
+  let str = d.string;
+  let labels = d.labels;
+
+  if (str === undefined || labels === undefined) {
+    str = ' ';
+    labels = [];
+  }
+
+  outputText(str, labels, activeTab);
+};
+
+const outputText = (str, labels, id) => {
+  let array = str.split('__');
+  for (let i = 0; i < labels.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (`${labels[i]}` === array[j]) {
+        array[j] = document.querySelector(`#${labels[i]}`).value;
+      }
+    }
+  }
+  let modString = array.join(' ');
+  document.querySelector(`#output${id}`).innerHTML = modString;
 };
 
 const renderLabel = (array, id) => {
   var labelhtml = '';
   for (let i = 0; i < array.length; i++) {
     labelhtml += `
-      <div class="form-group row col-sm-10">
-            <label for=${array[i]} class="col-sm-4 col-form-label">${
-      array[i]
-    }</label>
-            <div class="col-sm-6">
-              <input
-                type="text"
-                class="form-control"
-                id=${array[i]}
-              />
-            </div>
-          </div>
-      `;
+      <div class="form-group row col-sm-10"><label for=${
+        array[i]
+      } class="col-sm-4 col-form-label">${array[i]}</label>
+      <div class="col-sm-6"><input type="text" class="form-control" id=${
+        array[i]
+      }/></div></div>`;
   }
-  labelhtml += ` <button type="button" onclick="genButton()" id="gener${id}" class="my-4 btn btn-primary btn-lg">
-    Generate
-  </button>`;
+  labelhtml += `<button type="button" onclick="genButton()" id="gener${id}" class="my-4 btn btn-primary btn-lg">Generate</button>`;
   document.querySelector(`#label${id}`).innerHTML = labelhtml;
 };
 
@@ -184,29 +181,3 @@ class renderer {
     return labelsarray;
   }
 }
-
-const genButton = () => {
-  let d = JSON.parse(localStorage.getItem(activeTab));
-  let str = d.string;
-  let labels = d.labels;
-
-  if (str === undefined || labels === undefined) {
-    str = ' ';
-    labels = [];
-  }
-
-  outputText(str, labels, activeTab);
-};
-
-const outputText = (str, labels, id) => {
-  let array = str.split('__');
-  for (let i = 0; i < labels.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      if (`${labels[i]}` === array[j]) {
-        array[j] = document.querySelector(`#${labels[i]}`).value;
-      }
-    }
-  }
-  let modString = array.join(' ');
-  document.querySelector(`#output${id}`).innerHTML = modString;
-};
